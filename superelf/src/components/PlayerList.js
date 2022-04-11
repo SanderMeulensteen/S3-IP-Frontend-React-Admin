@@ -6,12 +6,8 @@ export const PlayerList = props => (
         <Datagrid rowClick="edit">
             <TextField source="id" />
             <TextField source="name" />
-            <ReferenceField source="position.id" reference="positions">
-                <TextField source="positionName" title={"position"}/>
-            </ReferenceField>
-            <ReferenceField source="club.id" reference="clubs">
-                <TextField source="clubName" />
-            </ReferenceField>
+            <TextField source="position.positionName" label="Position" />
+            <TextField source="club.clubName" label="Club" />
         </Datagrid>
     </List>
 );

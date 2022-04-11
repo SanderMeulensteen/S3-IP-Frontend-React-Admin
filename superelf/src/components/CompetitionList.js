@@ -1,12 +1,11 @@
 import React from 'react';
 import { List, Datagrid, TextField } from 'react-admin';
 
-export const ClubList = props => (
+export const CompetitionList = props => (
     <List {...props}>
         <Datagrid rowClick="edit">
             <TextField source="id" />
-            <TextField source="clubName" />
-            <TextField source="competition.competitionName" label="Competition name" />
+            <TextField source="competitionName" />
         </Datagrid>
     </List>
 );

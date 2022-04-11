@@ -4,11 +4,13 @@ import jsonServerProvider from 'ra-data-json-server';
 import { PlayerList } from './components/PlayerList'
 import { PositionList } from "./components/PositionList";
 import { ClubList } from "./components/ClubList";
+import { CompetitionList } from "./components/CompetitionList";
 
 const dataProvider = jsonServerProvider('http://localhost:8080/api');
 const App = () => (
       <Admin dataProvider={dataProvider}>
           <Resource name="clubs" list={ClubList} />
+          <Resource name="competitions" list={CompetitionList} />
           <Resource name="players" list={PlayerList} />
           <Resource name="positions" list={PositionList} />
       </Admin>
