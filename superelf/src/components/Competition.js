@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, Datagrid, TextField, EditButton } from 'react-admin';
+import { List, Datagrid, TextField, EditButton, Create, Edit, TextInput, SimpleForm } from 'react-admin';
 
 export const CompetitionList = props => (
     <List {...props}>
@@ -9,4 +9,21 @@ export const CompetitionList = props => (
             <EditButton />
         </Datagrid>
     </List>
+);
+
+export const CompetitionEdit = props => (
+    <Edit {...props}>
+        <SimpleForm>
+            <TextInput disabled source="id" />
+            <TextInput source="competitionName" />
+        </SimpleForm>
+    </Edit>
+);
+
+export const CompetitionCreate = props => (
+    <Create {...props}>
+        <SimpleForm>
+            <TextInput source="competitionName" />
+        </SimpleForm>
+    </Create>
 );
